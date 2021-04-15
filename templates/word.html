@@ -11,6 +11,9 @@
             {% endfor %}
         </h4><br>
 
+        {% if not antonyms %}
+        <!-- Leave blank if no antonyms -->
+        {% else %}
         <h4>Synonyms: 
             {% for synonym in synonyms %}
                 {% if not forloop.last %}
@@ -20,6 +23,7 @@
                 {% endif %}
             {% endfor %}
         </h4><br>
+        {% endif %}
         
         {% if not antonyms %}
         <!-- Leave blank if no antonyms -->
