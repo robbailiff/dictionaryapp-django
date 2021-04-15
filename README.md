@@ -1,4 +1,4 @@
-# Dictionary App List App with Django
+# Dictionary App with Django
 
 ## Introduction
 
