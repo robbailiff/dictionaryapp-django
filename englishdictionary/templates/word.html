@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+    {% block content %}
+
+        <h4>{% for key, value in definitions.items %}
+                {% if not forloop.last %}
+                    {{key}}: {{value | join:", "}}.<br><br>
+                {% else %}
+                    {{key}}: {{value | join:", "}}.<br>
+                {% endif %}
+            {% endfor %}
+        </h4><br>
+
+        <h4>Synonyms: 
+            {% for synonym in synonyms %}
+                {% if not forloop.last %}
+                    {{synonym}},
+                {% else %}
+                    {{synonym}}.
+                {% endif %}
+            {% endfor %}
+        </h4><br>
+        
+        {% if not antonyms %}
+        <!-- Leave blank if no antonyms -->
+        {% else %}
+        <h4>Antonyms:
+            {% for antonym in antonyms %}
+                {% if not forloop.last %}
+                    {{antonym}},
+                {% else %}
+                    {{antonym}}.
+                {% endif %}
+            {% endfor %}
+        </h4>
+        {% endif %}
+    {% endblock %}

@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Dictionary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+</head>
+
+<body style="background: #edebeb;">
+    <div class="grid-container fluid" style="min-height: 95vh;">
+        <div class="grid-x grid-padding-x grid-padding-y align-center-middle" >
+            <div class="cell medium-6 large-4">
+            <h1 class="text-center" style="color: white; background: #1779ba;">English Dictionary</h1>
+                <div class="card" style="border: 2px solid black;">
+                    <div class="card-section">
+                        <form action="word" class="input-group">
+                            <input type="text" name="search" class="searchTerm input-group-field" placeholder="Input Your Word Here">
+                            <div class="input-group-button">
+                                <button type="submit" class="searchButton button"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-divider">
+                        <h3>
+                        {% if not term %}
+                        Placeholder Text
+                        {% else %}
+                        {{term | title}}
+                        {% endif %}
+                        </h3>
+                    </div>
+                    <div class="card-section">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="top-bar bottom-bar menu" style="color: white; background: #1779ba;">
+        <div class="cell medium-6 large-4">
+            <h5 class="text-center">&#169 Rob Bailiff</h5>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+</body>
+</html>
