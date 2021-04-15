@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is a Django dictionary application made using PyDictionary module as a way for me to build upon and improve my understanding of the Django web framework. It uses the PyDictionary module API to call the users search term, and then displays the words meaning as well as its synonyms and antonyms. I then deployed it to Heroku using GitHub for the app to be hosted in cloud storage. You can check out the [Django Documentation](https://docs.djangoproject.com/en/3.2/), [Foundation 6 Documentation](https://get.foundation/sites/docs/) and the [Heroku Documentation](https://devcenter.heroku.com/categories/reference) for more information.
+This project is a Django dictionary application made using PyDictionary module as a way for me to build upon and improve my understanding of the Django web framework. It uses the PyDictionary module API to call the users search term, and then displays the words meaning as well as its synonyms and antonyms. I added some basic styling to the aaplication use the Foundation 6 CSS framework. I then deployed it to Heroku using GitHub for the app to be hosted in cloud storage. You can check out the [Django Documentation](https://docs.djangoproject.com/en/3.2/), [Foundation 6 Documentation](https://get.foundation/sites/docs/) and the [Heroku Documentation](https://devcenter.heroku.com/categories/reference) for more information.
 
 Check out my live site: https://dictionaryapp-rgjb.herokuapp.com/
 
